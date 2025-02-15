@@ -1,0 +1,162 @@
+
+#main-cont {
+    background-color: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    bottom: 0;
+    height: 85vh;
+    left: 0;
+    right: 0;
+    margin-top: 50px;
+    padding: 20px;
+    overflow: scroll;
+}
+
+#updates {
+    background-color: rgba(0, 0, 0, 0.75);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    height: 20vh;
+    max-height: 150px; /* Prevent it from growing too large */
+}
+
+#team-data {
+    position: relative;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    height: 80vh;
+    margin-bottom: 50px;
+    z-index: 1;
+
+}
+
+#top-scorer {
+    position: absolute;
+    /*height: 40vh; */
+    margin-top: 170px;
+}
+
+#top-scorer-img {
+    width: 100%;      /* Make it fill the width */
+    height: 100%;     /* Make it fill the height */
+    object-fit: cover; /* Crop the image to fit the available space */
+}
+
+#highlights-container {
+    position: absolute;
+    top: 850px;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 1200px;
+}
+
+#team-details {
+    position: absolute;
+    /*height: 40vh; */
+    margin-top: 420px;
+    margin-bottom: auto;
+    width: 500px;
+    max-height: 365px;  /* Set max height */
+    overflow-y: auto; 
+}
+
+#team-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 700px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+    transform: translate(-50%, -50%);
+    z-index: -1; /* Places it behind #main-cont */
+    opacity: 0.2; /* Optional: Makes it faint like a watermark */
+}
+
+#standings {    
+    position: relative;
+    margin-top: 170px;
+    margin-left: auto;
+    
+}
+
+#upcoming-fixtures {
+    position: relative;
+    margin-top: 30px;
+    margin-left: auto;
+}
+
+#btns {
+    position: absolute;
+    margin-top: 120px;
+
+}
+
+@media (max-width: 992px) {
+    #team-data {
+        position: relative; /* Reset any absolute positioning on smaller screens */
+        height: auto; /* Allow height to adjust based on content */
+        top: 150px;
+    }
+
+    #top-scorer, #team-details, #standings, #upcoming-fixtures, #btns {
+        position: relative; /* Remove absolute positioning */
+        margin-top: auto;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 15px; /* Adds spacing between cards */
+        width: 100%; /* Ensure the cards are full width */
+    }
+
+    #highlights-container {
+        position: relative; /* Remove absolute positioning */
+        top: auto;        /* Cancel the 850px top offset */
+        left: auto;       /* Cancel the left: 50% */
+        transform: none;  /* Remove the translateX(-50%) centering */
+        margin: 5px auto 15px; /* Adjust margins as needed */
+        width: 100%;      /* Ensure full width on small screens */
+        max-width: none; 
+    }
+}
+
+#updates-cont {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.match-title {
+    color: white;
+    font-size: 18px;
+    margin: 0;
+}
+
+.match-score {
+    color: white;
+    font-size: 18px;
+    margin: 0;
+}
+
+#team-standings {
+    max-height: 250px;  /* Set a fixed height */
+    overflow-y: auto;   /* Enable vertical scrolling */
+}
+
+#matches {
+    max-height: 250px;  /* Set a fixed height */
+    overflow-y: auto;   /* Enable vertical scrolling */
+}
+
+#table-title {
+    position: relative;
+    margin-top: 150px;
+}
+
+#text-color {
+    background-color: black;
+}
+
+
